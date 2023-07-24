@@ -8,6 +8,7 @@ class PublishedManager(models.Manager):
         return super().get_queryset()\
             .filter(status=Post.Status.PUBLISHED)
 
+
 # Create your models here.
 class Post(models.Model):
     # DF : 임시, PUBLISHED : 게시됨
