@@ -1,14 +1,13 @@
-from django.shortcuts import render, get_object_or_404
-from blog.models import Post
+from django.shortcuts import render, get_object_or_404, redirect
+from blog.models import Post, Comment
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import ListView
-from blog.forms import EmailPostForm
+from blog.forms import EmailPostForm, CommentForm
 from django.core.mail import send_mail
+from django.views.decorators.http import require_POST
 
 
 # Create your views here.
-
-
 def post_list(request):
     post_list = Post.published.all()
     # 페이지 당 3개의 게시물로 페이지네이션
@@ -37,7 +36,15 @@ def post_detail(request, year, month, day, post):
                              publish__year=year,
                              publish__month=month,
                              publish__day=day)
-    return render(request, 'blog/post/detail.html', {'post': post})
+    # List of active comments for this post
+    comments = post.comments.filter(active=True)
+    # Form for users to comment
+    form = CommentForm()
+    return render(request,
+                  'blog/post/detail.html',
+                  {'post': post,
+                   'comments': comments,
+                   'form': form})
 
 
 class PostListview(ListView):
@@ -65,3 +72,23 @@ def post_share(request, post_id):
     return render(request, 'blog/post/share.html', {'post': post,
                                                     'form': form,
                                                     'sent': sent})
+
+
+@require_POST
+def post_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    comment = None
+    # A comment was posted
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        # Create a Comment object without saving it to database
+        comment = form.save(commit=False)
+        # Assign the post to the comment
+        comment.post = post
+        # Save the comment to the database
+        comment.save()
+    return render(request,
+                  'blog/post/comment.html',
+                  {'post': post,
+                   'form': form,
+                   'comment': comment})
