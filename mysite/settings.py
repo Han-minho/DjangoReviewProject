@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import shop.context_processor
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-u3p0$p+fm0_0)!-0i8wd$c$*nq@o#h9=td31ewj$^+mefw!kxq
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost','127.0.0.1',
+    'localhost', '127.0.0.1',
 ]
 
 SITE_ID = 1
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
+    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "shop.context_processor.cart",
             ],
         },
     },
@@ -137,3 +141,21 @@ EMAIL_HOST_USER = 'hihi6024@gmail.com'
 EMAIL_HOST_PASSWORD = 'hxidlgknnbmykzjx'
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
+
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+SESSION_REDIS_ALIAS = "default"
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        }
+    }
+}

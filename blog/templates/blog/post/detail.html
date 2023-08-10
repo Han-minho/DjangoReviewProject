@@ -1,40 +1,39 @@
-{% extends "blog/base.html" %}
-{% load blog_tags %}
-{% block title %}{{ post.title }}{% endblock %}
+{% extends 'blog/base.html' %}
+
 {% block content %}
-    <h1>{{ post.title }}</h1>
-    <p class="date">
-        Published {{ post.publish }} by {{ post.author }}
-    </p>
-        {{ post.body|markdown }}
-    <p>
-        <a href="{% url 'blog:post_share' post.id %}">
-            Share this post
-        </a>
-    </p>
-    <h2>Similar posts</h2>
-    {% for post in similar_posts %}
-        <p>
-            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-        </p>
-    {% empty %}
-        There are no similar posts yet.
-    {% endfor %}
-    {% with comments.count as total_comments %}
-        <h2>
-            {{ total_comments }} comment {{ total_comments|pluralize }}
-        </h2>
-    {% endwith %}
-    {% for comment in comments %}
-        <div class="comment">
-            <p class="info">
-                Comment {{ forloop.counter }} by {{ comment.name}}
-                {{ comment.created }}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">
+                {{ post.body|linebreaks }}
             </p>
-            {{ comment.body|linebreaks }}
+            <a href="{% url 'blog:post_share' post.id %}" class="card-link">Share</a>
+            <a href="#" class="card-link">Another link</a>
         </div>
-    {% empty %}
-        <p>There are no comments yet.</p>
-    {% endfor %}
-    {% include "blog/post/includes/comment_form.html" %}
+    </div>
+    <div class="py-4">
+        <h5>Products</h5>
+        <ul class="list-group list-group-horizontal">
+            {% for product in post.products.all %}
+                <li class="list-group-item">{% include 'shop/product_detail.html' with product=product %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="card border-white">
+        <div class="card-body">
+            <div class="card-title">
+                <h5>Comments</h5>
+            </div>
+            <ul class="list-group">
+                {% for comment in comments %}
+                    <li class="list-group-item">
+                        <b>{{ comment.name }}:</b> {{ comment.body|linebreaks }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="card border-white">
+        {% include 'blog/post/includes/comment_form.html' %}
+    </div>
 {% endblock content %}
