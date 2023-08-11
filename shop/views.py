@@ -1,6 +1,7 @@
+from shop.forms import OrderCreateForm
 from django.shortcuts import render, redirect, get_object_or_404
 from decimal import Decimal
-from shop.models import Product
+from shop.models import Product, OrderItem
 
 
 # Create your views here.
@@ -52,4 +53,30 @@ def cart_update(request, product_id):
 
 
 def order_create(request):
-    return render(request, 'shop/order_created.html', {})
+    cart = request.session.get('cart',{})
+
+    product_ids = cart.keys()
+    products = Product.objects.filter(id__in=product_ids)
+    for product in products:
+        cart[str(product.id)]['product'] = product
+    for key, item in cart.items():
+        item['price']=Decimal(item['price'])
+        item['total_price'] = item['price'] * item['quantity']
+        cart['key']=item
+        total_price = sum(Decimal(item['price'])*item['quantity'] for item in cart.values())
+        if len(cart.keys()) == 0:
+            return redirect('home')
+        if request.method == 'POST':
+            form = OrderCreateForm(request.POST)
+            if form.is_valid():
+                order = form.save()
+                for item in cart.values():
+                    OrderItem.objects.create(order=order, product=item['product'], price=item['price'], quantity=item['quantity'])
+                    request.session['cart'] = {}
+                    request.session.modified = True
+
+            return render(request, 'shop/order_created.html', {'order': order})
+
+        else:
+            form = OrderCreateForm()
+        return render(request, 'shop/new_order.html', {'form': form, 'cart_dict': cart, 'total_price': total_price})
