@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar bg-body-emphasis">
     <div class="container-fluid">
-        <a class="navbar-brand h1" href="/">Django Blog</a>
+        <a class="navbar-brand h1" href="/">쇼핑몰 고도화 프로젝트</a>
     </div>
 </nav>
 
@@ -24,7 +24,12 @@
             {% endblock content %}
         </div>
         <div class="col-3 text-bg-light">
-            <h3>Sidebar</h3>
+            <h3>
+                Sidebar
+                <a href="{% url 'shop:cart_detail' %}" class="btn btn-sm btn-info">
+                    장바구니 <span id="cart_count">{{ cart.items|length }}</span>
+                </a>
+            </h3>
             <hr>
             <h4>Most commented Posts</h4>
             {% get_most_commented_posts as most_commented_posts %}
@@ -44,5 +49,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+<script>
+    const csrftoken = Cookies.get('csrftoken');
+    document.addEventListener('DOMContentLoaded', (event) => {
+        console.log('loaded', csrftoken)
+        {% block domready %}
+        {% endblock domready %}
+    })
+</script>
 </body>
 </html>
