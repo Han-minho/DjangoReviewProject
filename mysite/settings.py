@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.postgres',
     'shop.apps.ShopConfig',
+    'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -178,3 +180,14 @@ LANGUAGES = [
     ('en', _('English')),
     ('ko', _('Korean')),
 ]
+
+PARLER_LANGUAGES = {
+    1: (
+        {'code': 'en'},
+        {'code': 'ko'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}

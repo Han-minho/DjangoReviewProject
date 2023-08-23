@@ -16,25 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.sitemaps.views import sitemap
-
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 from blog import views
-from blog.sitemaps import PostSitemap
+
 from django.conf import settings
 from django.conf.urls.static import static
 
 
-sitemaps = {
-    'posts': PostSitemap,
-}
-
-urlpatterns = [
-    path('', views.post_list, name='home'),
-    path('admin/', admin.site.urls),
+urlpatterns = i18n_patterns(
+    path("", views.post_list, name='home'),
+    path("admin/", admin.site.urls),
     path("account/", include('account.urls')),
-    path('blog/', include('blog.urls', namespace='blog')),
-    path('shop/', include('shop.urls', namespace='shop')),
+    path("blog/", include('blog.urls')),
+    path("shop/", include('shop.urls')),
     path('social-auth/', include('social_django.urls', namespace='social')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-         name='django.contrib.sitemaps.views.sitemap')
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('rosetta/', include('rosetta.urls')),
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

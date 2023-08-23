@@ -1,8 +1,9 @@
 from django.urls import path
-
+from django.utils.translation import gettext_lazy as _
+from django.conf.urls.i18n import i18n_patterns
 from shop import views
 
-app_name = 'shop'
+app_name='shop'
 
 urlpatterns = [
     path('', views.cart_detail, name='cart_detail'),
@@ -11,3 +12,4 @@ urlpatterns = [
     path('remove/<int:product_id>', views.cart_remove, name='remove_cart'),
     path('order_create/', views.order_create, name='order_create'),
 ]
+

@@ -1,9 +1,10 @@
 {% extends "blog/base.html" %}
+{% load i18n %}
 {% load blog_tags %}
-{% block title %}Search{% endblock title %}
+{% block title %}{% trans 'Search' %}{% endblock title %}
 {% block content %}
     {% if query %}
-        <h1>Posts containing "{{ query }}"</h1>
+        <h1>{% trans 'Posts containing' %} "{{ query }}"</h1>
         <h3>
             {% with results.count as total_results %}
             Found {{ total_results }} result {{ total_results|pluralize }}
@@ -17,13 +18,13 @@
             </h4>
             {{ post.body|markdown|truncatewords_html:12 }}
         {% empty %}
-            <p>There are no results for your query.</p>
+            <p>{% trans 'There are no results for your query' %}.</p>
         {% endfor %}
         <p><a href="{% url 'blog:post_search' %}">
-            Search again.
+            {% trans 'Search again' %}.
         </a></p>
     {% else %}
-        <h1>Search for posts</h1>
+        <h1>{% trans 'Search for posts' %}</h1>
         <form method="get">
             {{ form.as_p }}
             <input type="submit" value="Search">

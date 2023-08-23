@@ -12,3 +12,4 @@ redis
 social-auth-app-django
 Werkzeug
 django-rosetta
+django-parler

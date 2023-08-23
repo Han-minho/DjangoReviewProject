@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-23 09:19+0900\n"
+"POT-Creation-Date: 2023-08-23 10:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\mysite\settings.py:178
+#: .\blog\templates\blog\base.html:35
+msgid "Most commented Posts"
+msgstr ""
+
+#: .\blog\templates\blog\base.html:44
+msgid "Latest Posts"
+msgstr ""
+
+#: .\blog\templates\blog\post\detail.html:15
+msgid "Products"
+msgstr ""
+
+#: .\blog\templates\blog\post\detail.html:28
+msgid "Comments"
+msgstr ""
+
+#: .\blog\templates\blog\post\list.html:4
+msgid "My Blog"
+msgstr ""
+
+#: .\blog\templates\blog\post\list.html:6
+msgid "My Blog_List"
+msgstr ""
+
+#: .\blog\templates\blog\post\list.html:17
+msgid "Tags"
+msgstr ""
+
+#: .\blog\templates\blog\post\share.html:6
+msgid "E-mail successfully sent"
+msgstr ""
+
+#: .\blog\templates\blog\post\share.html:8
+msgid "was successfully sent to"
+msgstr ""
+
+#: .\mysite\settings.py:180
 msgid "English"
 msgstr "English"
 
-#: .\mysite\settings.py:179
+#: .\mysite\settings.py:181
 msgid "Korean"
 msgstr "Korean"
+
+#: .\mysite\urls.py:32
+msgid "shop/"
+msgstr ""
+
+#: .\mysite\urls.py:33
+msgid "social-auth/"
+msgstr ""
+
+#: .\mysite\urls.py:34
+msgid "rosetta/"
+msgstr ""
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:518
 #, python-brace-format

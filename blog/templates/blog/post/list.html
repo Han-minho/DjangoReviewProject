@@ -1,35 +1,29 @@
-{% extends "blog/base.html" %}
-{% load blog_tags %}
-{% block title %}My Blog{% endblock %}
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
 {% block content %}
-    <h1>My Blog_List</h1>
-    {% if tag %}
-        <h2>Posts tagged with "{{ tag.name }}"</h2>
-    {% endif %}
-    {% for post in posts %}
-    <h2>
-        <a href="{{ post.get_absolute_url }}">
-            {{ post.title }}
-        </a>
-    </h2>
-    <p class="tags">
-        Tags:
-        {% for tag in post.tag.all %}
-            <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
-                {{ tag.name }}
-            </a>
-            {% if not forloop.last %},{% endif %}
+    <h1>{% trans "title_list" %}</h1>
+
+    <ul class="list-group">
+        {% for post in posts %}
+            <li class="list-group-item">
+                <a class="fs-3" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                <p>
+                    {{ post.body|truncatewords:30 }}
+                </p>
+                <p>
+                    Tags:
+                    {% for tag in post.tags.all %}
+                        <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+                        {{ tag.name }}
+                        </a>
+                        {% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                </p>
+            </li>
         {% endfor %}
-    </p>
-    <p class="date">
-        Published {{ post.publish }} by {{ post.author }}
-    </p>
-        {{ post.body|markdown|truncatewords:30 }}
-    {% endfor %}
-    <!-- pagination 오류 제거 -->
-    {% if page_obj != null %}
-        {% include "pagination.html" with page=page_obj %}
-    {% else %}
-        {% include "pagination.html" with page=posts %}
-    {% endif %}
-{% endblock %}
+    </ul>
+    {#   CBV의 경우 posts 대신 page_obj 사용 #}
+    {% include 'blog/pagination.html' with page=posts %}
+
+{% endblock content %}
