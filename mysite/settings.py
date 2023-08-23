@@ -70,7 +70,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,10 +140,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # 이메일 서버 구성
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'hihi6024@gmail.com'
-EMAIL_HOST_PASSWORD = 'uefzyjwwoeuufrlo'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
 
@@ -162,8 +165,6 @@ CACHES = {
     }
 }
 CART_SESSION_ID = 'cart'
-
-CELERY_TASK_ALWAYS_EAGER = DEBUG
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -191,3 +192,11 @@ PARLER_LANGUAGES = {
         'hide_untranslated': False,
     }
 }
+
+CELERY_TASK_ALWAYS_EAGER = True
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
+
+LOGIN_REDIRECT_URL = 'home'

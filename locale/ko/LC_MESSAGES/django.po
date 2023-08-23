@@ -8,42 +8,103 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-23 10:22+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-08-23 20:10+0900\n"
+"PO-Revision-Date: 2023-08-23 06:22+0000\n"
+"Last-Translator:   <jmbae@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\blog\templates\blog\base.html:35
-msgid "Most commented Posts"
+#: .\blog\templates\blog\base.html:10
+msgid "base.html"
+msgstr "브라우저 타이틀"
+
+#: .\blog\templates\blog\base.html:17
+msgid "title_nav"
+msgstr "상점 고도화 + 국제화 사이트"
+
+#: .\blog\templates\blog\base.html:53
+msgid "title_sidebar"
+msgstr "사이드바"
+
+#: .\blog\templates\blog\base.html:55
+msgid "btn_cart"
+msgstr "장바구니"
+
+#: .\blog\templates\blog\base.html:59
+msgid "title_most_commented_post"
+msgstr "인기글"
+
+#: .\blog\templates\blog\base.html:68
+msgid "title_latest_posts"
+msgstr "최신글"
+
+#: .\blog\templates\blog\pagination.html:8
+msgid "Previous"
+msgstr "이전"
+
+#: .\blog\templates\blog\pagination.html:18
+msgid "Next"
+msgstr "다음"
+
+#: .\blog\templates\blog\post\comment.html:6
+msgid "Your comment has been added"
 msgstr ""
 
-#: .\blog\templates\blog\base.html:44
-msgid "Latest Posts"
+#: .\blog\templates\blog\post\comment.html:8
+msgid "Back to the post"
 msgstr ""
+
+#: .\blog\templates\blog\post\detail.html:11
+msgid "link_share"
+msgstr "공유하기"
 
 #: .\blog\templates\blog\post\detail.html:15
-msgid "Products"
-msgstr ""
+msgid "title_products"
+msgstr "제품"
+
+#: .\blog\templates\blog\post\detail.html:20
+msgid "btn_add_to_cart"
+msgstr "장바구니 담기"
 
 #: .\blog\templates\blog\post\detail.html:28
-msgid "Comments"
+msgid "title_comments"
+msgstr "댓글"
+
+#: .\blog\templates\blog\post\includes\comment_form.html:2
+msgid "title_comment_form"
+msgstr "새 댓글"
+
+#: .\blog\templates\blog\post\includes\comment_form.html:6
+msgid "btn_add_comment"
+msgstr "댓글 쓰기"
+
+#: .\blog\templates\blog\post\list.html:5
+msgid "title_list"
+msgstr "목록"
+
+#: .\blog\templates\blog\post\search.html:4
+msgid "Search"
 msgstr ""
 
-#: .\blog\templates\blog\post\list.html:4
-msgid "My Blog"
+#: .\blog\templates\blog\post\search.html:7
+msgid "Posts containing"
 msgstr ""
 
-#: .\blog\templates\blog\post\list.html:6
-msgid "My Blog_List"
+#: .\blog\templates\blog\post\search.html:21
+msgid "There are no results for your query"
 msgstr ""
 
-#: .\blog\templates\blog\post\list.html:17
-msgid "Tags"
+#: .\blog\templates\blog\post\search.html:24
+msgid "Search again"
+msgstr ""
+
+#: .\blog\templates\blog\post\search.html:27
+msgid "Search for posts"
 msgstr ""
 
 #: .\blog\templates\blog\post\share.html:6
@@ -54,25 +115,13 @@ msgstr ""
 msgid "was successfully sent to"
 msgstr ""
 
-#: .\mysite\settings.py:180
+#: .\mysite\settings.py:181
 msgid "English"
 msgstr "영어"
 
-#: .\mysite\settings.py:181
+#: .\mysite\settings.py:182
 msgid "Korean"
 msgstr "한국어"
-
-#: .\mysite\urls.py:32
-msgid "shop/"
-msgstr ""
-
-#: .\mysite\urls.py:33
-msgid "social-auth/"
-msgstr ""
-
-#: .\mysite\urls.py:34
-msgid "rosetta/"
-msgstr ""
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:518
 #, python-brace-format
@@ -1575,3 +1624,13 @@ msgstr ""
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
 msgstr ""
+
+#~ msgid "link_logout"
+#~ msgstr "로그아웃"
+
+#~ msgid "link_login"
+#~ msgstr "로그인"
+
+#~| msgid "link_share"
+#~ msgid "link_register"
+#~ msgstr "회원가입"
