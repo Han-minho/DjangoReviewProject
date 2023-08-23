@@ -1,0 +1,14 @@
+celery
+Django==4.2.4
+django-debug-toolbar
+django-extensions
+django-redis
+django-taggit
+easy-thumbnails
+Pillow
+psycopg2-binary
+pyOpenSSL
+redis
+social-auth-app-django
+Werkzeug
+django-rosetta
