@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 11:46+0900\n"
+"POT-Creation-Date: 2023-08-24 22:18+0900\n"
 "PO-Revision-Date: 2023-08-23 05:37+0000\n"
 "Last-Translator:   <jmbae@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,19 +92,6 @@ msgstr ""
 
 #: .\shop\templates\shop\new_order.html:22
 msgid "title_order_info"
-msgstr ""
-
-#: .\shop\templates\shop\order_created.html:4
-#: .\shop\templates\shop\order_created.html:8
-msgid "order_completed"
-msgstr ""
-
-#: .\shop\templates\shop\order_created.html:10
-msgid "order"
-msgstr ""
-
-#: .\shop\templates\shop\order_created.html:10
-msgid " order_finshed"
 msgstr ""
 
 #, fuzzy, python-format

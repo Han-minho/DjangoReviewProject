@@ -145,7 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # 이메일 서버 구성
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hihi6024@gmail.com'
+EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
@@ -208,7 +208,7 @@ PARLER_LANGUAGES = {
     }
 }
 
-CELERY_TASK_ALWAYS_EAGER = True
+CELERY_TASK_ALWAYS_EAGER = DEBUG
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
@@ -218,9 +218,9 @@ LOGIN_REDIRECT_URL = 'home'
 
 # Stripe 설정
 # Publishable key
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51NiU7PCwCR8LeetfU8mQr7VCIF5mrXxHQZlIMNhKoyshyjZrbGjljVb6zikMcFdB1yv5GcU7fsQeYl3DRU8NW1Yx00WdrGvZ9v'
+# STRIPE_PUBLISHABLE_KEY = 'pk_test_51NiU7PCwCR8LeetfU8mQr7VCIF5mrXxHQZlIMNhKoyshyjZrbGjljVb6zikMcFdB1yv5GcU7fsQeYl3DRU8NW1Yx00WdrGvZ9v'
 # Secret key
-STRIPE_SECRET_KEY = 'sk_test_51NiU7PCwCR8LeetflVLWoyUA2rOxaY0a1xk5GmjONzWpoVCTlgPyueHBipBsAosSpTfF5aQi8mzHWvgkee3zrHqe006nOQNICk'
-STRIPE_API_VERSION = '2022-08-01'
+# STRIPE_SECRET_KEY = 'sk_test_51NiU7PCwCR8LeetflVLWoyUA2rOxaY0a1xk5GmjONzWpoVCTlgPyueHBipBsAosSpTfF5aQi8mzHWvgkee3zrHqe006nOQNICk'
+# STRIPE_API_VERSION = '2022-08-01'
 
-
+CSRF_TRUSTED_ORIGINS = ['ee03-221-146-62-123.ngrok.io']

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 11:49+0900\n"
+"POT-Creation-Date: 2023-08-24 14:52+0900\n"
 "PO-Revision-Date: 2023-08-23 05:38+0000\n"
 "Last-Translator:   <jmbae@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,46 @@ msgstr "English"
 #: .\mysite\settings.py:197
 msgid "Korean"
 msgstr "Korean"
+
+#: .\templates\base.html:10 .\templates\no_sidebar.html:10
+msgid "base.html"
+msgstr "Title"
+
+#: .\templates\base.html:17 .\templates\no_sidebar.html:17
+msgid "title_nav"
+msgstr "Django Shop + I18n"
+
+#: .\templates\base.html:21
+msgid "link_logout"
+msgstr ""
+
+#: .\templates\base.html:23
+#, fuzzy
+#| msgid "link_share"
+msgid "link_login"
+msgstr "Share"
+
+#: .\templates\base.html:24
+#, fuzzy
+#| msgid "link_share"
+msgid "link_register"
+msgstr "Share"
+
+#: .\templates\base.html:62
+msgid "title_sidebar"
+msgstr "Sidebar"
+
+#: .\templates\base.html:64
+msgid "btn_cart"
+msgstr "Cart"
+
+#: .\templates\base.html:68
+msgid "title_most_commented_post"
+msgstr "Most Commented Post"
+
+#: .\templates\base.html:77
+msgid "title_latest_posts"
+msgstr "Latest Post"
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:518
 #, python-brace-format
@@ -1014,30 +1054,37 @@ msgid "noon"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:7
+#: .\venv\Lib\site-packages\tornado\locale.py:295
 msgid "Monday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:8
+#: .\venv\Lib\site-packages\tornado\locale.py:296
 msgid "Tuesday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:9
+#: .\venv\Lib\site-packages\tornado\locale.py:297
 msgid "Wednesday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:10
+#: .\venv\Lib\site-packages\tornado\locale.py:298
 msgid "Thursday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:11
+#: .\venv\Lib\site-packages\tornado\locale.py:299
 msgid "Friday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:12
+#: .\venv\Lib\site-packages\tornado\locale.py:300
 msgid "Saturday"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:13
+#: .\venv\Lib\site-packages\tornado\locale.py:301
 msgid "Sunday"
 msgstr ""
 
@@ -1070,50 +1117,62 @@ msgid "Sun"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:25
+#: .\venv\Lib\site-packages\tornado\locale.py:281
 msgid "January"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:26
+#: .\venv\Lib\site-packages\tornado\locale.py:282
 msgid "February"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:27
+#: .\venv\Lib\site-packages\tornado\locale.py:283
 msgid "March"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:28
+#: .\venv\Lib\site-packages\tornado\locale.py:284
 msgid "April"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:29
+#: .\venv\Lib\site-packages\tornado\locale.py:285
 msgid "May"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:30
+#: .\venv\Lib\site-packages\tornado\locale.py:286
 msgid "June"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:31
+#: .\venv\Lib\site-packages\tornado\locale.py:287
 msgid "July"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:32
+#: .\venv\Lib\site-packages\tornado\locale.py:288
 msgid "August"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:33
+#: .\venv\Lib\site-packages\tornado\locale.py:289
 msgid "September"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:34
+#: .\venv\Lib\site-packages\tornado\locale.py:290
 msgid "October"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:35
+#: .\venv\Lib\site-packages\tornado\locale.py:291
 msgid "November"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:36
+#: .\venv\Lib\site-packages\tornado\locale.py:292
 msgid "December"
 msgstr ""
 
@@ -1529,23 +1588,94 @@ msgstr ""
 msgid "Unable to connect to qpid with SASL mechanism %s"
 msgstr ""
 
-#~ msgid "base.html"
-#~ msgstr "Title"
+#: .\venv\Lib\site-packages\tornado\locale.py:371
+msgid "1 second ago"
+msgstr ""
 
-#~ msgid "title_nav"
-#~ msgstr "Django Shop + I18n"
+#: .\venv\Lib\site-packages\tornado\locale.py:377
+msgid "1 minute ago"
+msgstr ""
 
-#~ msgid "title_sidebar"
-#~ msgstr "Sidebar"
+#: .\venv\Lib\site-packages\tornado\locale.py:382
+msgid "1 hour ago"
+msgstr ""
 
-#~ msgid "btn_cart"
-#~ msgstr "Cart"
+#: .\venv\Lib\site-packages\tornado\locale.py:385
+#, python-format
+msgid "%(time)s"
+msgstr ""
 
-#~ msgid "title_most_commented_post"
-#~ msgstr "Most Commented Post"
+#: .\venv\Lib\site-packages\tornado\locale.py:387
+msgid "yesterday"
+msgstr ""
 
-#~ msgid "title_latest_posts"
-#~ msgstr "Latest Post"
+#: .\venv\Lib\site-packages\tornado\locale.py:387
+#, python-format
+msgid "yesterday at %(time)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:389
+#, python-format
+msgid "%(weekday)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:389
+#, python-format
+msgid "%(weekday)s at %(time)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:392
+#: .\venv\Lib\site-packages\tornado\locale.py:445
+#, python-format
+msgid "%(month_name)s %(day)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:394
+#, python-format
+msgid "%(month_name)s %(day)s at %(time)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:399
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:401
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s at %(time)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:439
+#, python-format
+msgid "%(weekday)s, %(month_name)s %(day)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\locale.py:462
+#, python-format
+msgid "%(commas)s and %(last)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:68
+msgctxt "law"
+msgid "right"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:69
+msgctxt "good"
+msgid "right"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:70
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:72
+msgctxt "organization"
+msgid "club"
+msgstr ""
+
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:74
+#: .\venv\Lib\site-packages\tornado\test\locale_test.py:75
+msgctxt "stick"
+msgid "club"
+msgstr ""
 
 #~ msgid "Previous"
 #~ msgstr "Previous"
@@ -1573,8 +1703,3 @@ msgstr ""
 
 #~ msgid "title_list"
 #~ msgstr "List"
-
-#, fuzzy
-#~| msgid "link_share"
-#~ msgid "link_register"
-#~ msgstr "Share"

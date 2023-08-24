@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 11:49+0900\n"
+"POT-Creation-Date: 2023-08-24 14:52+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,29 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\blog\templates\blog\base.html:10
-msgid "base.html"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:17
-msgid "title_nav"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:53
-msgid "title_sidebar"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:55
-msgid "btn_cart"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:59
-msgid "title_most_commented_post"
-msgstr ""
-
-#: .\blog\templates\blog\base.html:68
-msgid "title_latest_posts"
-msgstr ""
 
 #: .\blog\templates\blog\pagination.html:8
 msgid "Previous"

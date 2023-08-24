@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 11:49+0900\n"
+"POT-Creation-Date: 2023-08-24 14:52+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,29 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: .\blog\templates\blog\base.html:10
-msgid "base.html"
-msgstr "브라우저 타이틀"
-
-#: .\blog\templates\blog\base.html:17
-msgid "title_nav"
-msgstr "쇼핑몰 고도화 프로젝트"
-
-#: .\blog\templates\blog\base.html:53
-msgid "title_sidebar"
-msgstr "사이드바"
-
-#: .\blog\templates\blog\base.html:55
-msgid "btn_cart"
-msgstr "장바구니 담기"
-
-#: .\blog\templates\blog\base.html:59
-msgid "title_most_commented_post"
-msgstr "인기글"
-
-#: .\blog\templates\blog\base.html:68
-msgid "title_latest_posts"
-msgstr "최신글"
 
 #: .\blog\templates\blog\pagination.html:8
 msgid "Previous"
@@ -112,3 +89,21 @@ msgstr "이메일을 성공적으로 보냈습니다."
 #: .\blog\templates\blog\post\share.html:8
 msgid "was successfully sent to"
 msgstr "보내신 메일은"
+
+#~ msgid "base.html"
+#~ msgstr "브라우저 타이틀"
+
+#~ msgid "title_nav"
+#~ msgstr "쇼핑몰 고도화 프로젝트"
+
+#~ msgid "title_sidebar"
+#~ msgstr "사이드바"
+
+#~ msgid "btn_cart"
+#~ msgstr "장바구니 담기"
+
+#~ msgid "title_most_commented_post"
+#~ msgstr "인기글"
+
+#~ msgid "title_latest_posts"
+#~ msgstr "최신글"

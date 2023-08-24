@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-23 20:10+0900\n"
+"POT-Creation-Date: 2023-08-24 14:51+0900\n"
 "PO-Revision-Date: 2023-08-23 06:22+0000\n"
 "Last-Translator:   <jmbae@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,52 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
-
-#: .\account\templates\base.html:10 .\account\templates\no_login.html:10
-msgid "base.html"
-msgstr ""
-
-#: .\account\templates\base.html:17 .\account\templates\no_login.html:17
-#, fuzzy
-#| msgid "title_login"
-msgid "title_nav"
-msgstr "Log-In"
-
-#: .\account\templates\base.html:21
-msgid "link_logout"
-msgstr ""
-
-#: .\account\templates\base.html:23
-#, fuzzy
-#| msgid "title_login"
-msgid "link_login"
-msgstr "Log-In"
-
-#: .\account\templates\base.html:24
-#, fuzzy
-#| msgid "btn_register"
-msgid "link_register"
-msgstr "Resister"
-
-#: .\account\templates\base.html:62
-#, fuzzy
-#| msgid "title_register"
-msgid "title_sidebar"
-msgstr "Register"
-
-#: .\account\templates\base.html:64
-#, fuzzy
-#| msgid "btn_register"
-msgid "btn_cart"
-msgstr "Resister"
-
-#: .\account\templates\base.html:68
-msgid "title_most_commented_post"
-msgstr ""
-
-#: .\account\templates\base.html:77
-msgid "title_latest_posts"
-msgstr ""
 
 #: .\account\templates\registration\login.html:3
 #: .\account\templates\registration\login.html:7
@@ -78,3 +32,28 @@ msgstr "Register"
 #: .\account\templates\registration\register.html:14
 msgid "btn_register"
 msgstr "Resister"
+
+#, fuzzy
+#~| msgid "title_login"
+#~ msgid "title_nav"
+#~ msgstr "Log-In"
+
+#, fuzzy
+#~| msgid "title_login"
+#~ msgid "link_login"
+#~ msgstr "Log-In"
+
+#, fuzzy
+#~| msgid "btn_register"
+#~ msgid "link_register"
+#~ msgstr "Resister"
+
+#, fuzzy
+#~| msgid "title_register"
+#~ msgid "title_sidebar"
+#~ msgstr "Register"
+
+#, fuzzy
+#~| msgid "btn_register"
+#~ msgid "btn_cart"
+#~ msgstr "Resister"
