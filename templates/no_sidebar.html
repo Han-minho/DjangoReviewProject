@@ -43,30 +43,10 @@
 </nav>
 
 <div class="container gy-5">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-9">
             {% block content %}
             {% endblock content %}
-        </div>
-        <div class="col-3 text-bg-light">
-            <h3>
-                {% trans "title_sidebar" %}
-                <a href="{% url 'shop:cart_detail' %}" class="btn btn-sm btn-info">
-                    {% trans "btn_cart" %} <span id="cart_count">{{ cart.items|length }}</span>
-                </a>
-            </h3>
-            <hr>
-            <h4>{% trans "title_most_commented_post" %}</h4>
-            {% get_most_commented_posts as most_commented_posts %}
-            <ul class="list-group">
-                {% for post in most_commented_posts %}
-                    <li class="list-group-item">
-                        <a class="list-group-item-action" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-            <h4 class="mt-3">{% trans "title_latest_posts" %}</h4>
-            {% show_latest_posts 3 %}
         </div>
     </div>
 </div>
@@ -82,5 +62,7 @@
         {% endblock domready %}
     })
 </script>
+{% block javascript %}
+{% endblock %}
 </body>
 </html>
