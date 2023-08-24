@@ -215,3 +215,10 @@ REDIS_PORT = 6379
 REDIS_DB = 1
 
 LOGIN_REDIRECT_URL = 'home'
+
+# Stripe 설정
+# Publishable key
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51NiU7PCwCR8LeetfU8mQr7VCIF5mrXxHQZlIMNhKoyshyjZrbGjljVb6zikMcFdB1yv5GcU7fsQeYl3DRU8NW1Yx00WdrGvZ9v'
+# Secret key
+STRIPE_SECRET_KEY = 'sk_test_51NiU7PCwCR8LeetflVLWoyUA2rOxaY0a1xk5GmjONzWpoVCTlgPyueHBipBsAosSpTfF5aQi8mzHWvgkee3zrHqe006nOQNICk'
+STRIPE_API_VERSION = '2022-08-01'
