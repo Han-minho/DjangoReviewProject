@@ -5,4 +5,3 @@
     <img width="120" src="{{ product.image.url }}" alt="">
 {% endif %}
 <span>{{ product.price|intcomma }}원</span>
-<a href="{% url 'shop:add_cart' %}">{% trans 'Add to Cart' %}</a>
