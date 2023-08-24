@@ -13,3 +13,9 @@ social-auth-app-django
 Werkzeug
 django-rosetta
 django-parler
+asgiref
+sqlparse
+Pillow
+flower
+stripe
+WeasyPrint
