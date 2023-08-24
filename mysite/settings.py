@@ -81,6 +81,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 "shop.context_processor.cart",
+                # 'social_django.context_processors.backends',
+                # 'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -167,12 +169,23 @@ CACHES = {
 CART_SESSION_ID = 'cart'
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.naver.NaverOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 SOCIAL_AUTH_NAVER_KEY = 'JiARA_lKm_5xm9Sd9l4x'
 SOCIAL_AUTH_NAVER_SECRET = 'TXMPVDfEVC'
 
+
+SOCIAL_AUTH_JSONFIELD_ENABLED = True
+
+# SOCIAL_AUTH_POSTGRES_JSONFIELD = True  # Before
+# SOCIAL_AUTH_JSONFIELD_ENABLED = True  # After
+#
+# SOCIAL_AUTH_JSONFIELD_CUSTOM = 'django.contrib.postgres.fields.JSONField'
+#
+# SOCIAL_AUTH_JSONFIELD_CUSTOM = 'django.db.models.JSONField'
+#
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
