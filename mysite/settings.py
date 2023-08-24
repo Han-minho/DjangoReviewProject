@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-u3p0$p+fm0_0)!-0i8wd$c$*nq@o#h9=td31ewj$^+mefw!kxq
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'mysite.com', 'localhost', '127.0.0.1',
+    'mysite.com', 'localhost', '127.0.0.1', 'ee03-221-146-62-123.ngrok.io',
 ]
 
 SITE_ID = 1
@@ -222,3 +222,5 @@ STRIPE_PUBLISHABLE_KEY = 'pk_test_51NiU7PCwCR8LeetfU8mQr7VCIF5mrXxHQZlIMNhKoyshy
 # Secret key
 STRIPE_SECRET_KEY = 'sk_test_51NiU7PCwCR8LeetflVLWoyUA2rOxaY0a1xk5GmjONzWpoVCTlgPyueHBipBsAosSpTfF5aQi8mzHWvgkee3zrHqe006nOQNICk'
 STRIPE_API_VERSION = '2022-08-01'
+
+
