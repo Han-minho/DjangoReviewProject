@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-23 20:10+0900\n"
+"POT-Creation-Date: 2023-08-24 11:49+0900\n"
 "PO-Revision-Date: 2023-08-23 05:38+0000\n"
 "Last-Translator:   <jmbae@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,107 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\blog\templates\blog\base.html:10
-msgid "base.html"
-msgstr "Title"
-
-#: .\blog\templates\blog\base.html:17
-msgid "title_nav"
-msgstr "Django Shop + I18n"
-
-#: .\blog\templates\blog\base.html:53
-msgid "title_sidebar"
-msgstr "Sidebar"
-
-#: .\blog\templates\blog\base.html:55
-msgid "btn_cart"
-msgstr "Cart"
-
-#: .\blog\templates\blog\base.html:59
-msgid "title_most_commented_post"
-msgstr "Most Commented Post"
-
-#: .\blog\templates\blog\base.html:68
-msgid "title_latest_posts"
-msgstr "Latest Post"
-
-#: .\blog\templates\blog\pagination.html:8
-msgid "Previous"
-msgstr "Previous"
-
-#: .\blog\templates\blog\pagination.html:18
-msgid "Next"
-msgstr "Next"
-
-#: .\blog\templates\blog\post\comment.html:6
-msgid "Your comment has been added"
-msgstr ""
-
-#: .\blog\templates\blog\post\comment.html:8
-msgid "Back to the post"
-msgstr ""
-
-#: .\blog\templates\blog\post\detail.html:11
-msgid "link_share"
-msgstr "Share"
-
-#: .\blog\templates\blog\post\detail.html:15
-msgid "title_products"
-msgstr "Products"
-
-#: .\blog\templates\blog\post\detail.html:20
-msgid "btn_add_to_cart"
-msgstr "Add to cart"
-
-#: .\blog\templates\blog\post\detail.html:28
-msgid "title_comments"
-msgstr "Comments"
-
-#: .\blog\templates\blog\post\includes\comment_form.html:2
-msgid "title_comment_form"
-msgstr "Comment Form"
-
-#: .\blog\templates\blog\post\includes\comment_form.html:6
-msgid "btn_add_comment"
-msgstr "Add Comment"
-
-#: .\blog\templates\blog\post\list.html:5
-msgid "title_list"
-msgstr "List"
-
-#: .\blog\templates\blog\post\search.html:4
-msgid "Search"
-msgstr ""
-
-#: .\blog\templates\blog\post\search.html:7
-msgid "Posts containing"
-msgstr ""
-
-#: .\blog\templates\blog\post\search.html:21
-msgid "There are no results for your query"
-msgstr ""
-
-#: .\blog\templates\blog\post\search.html:24
-msgid "Search again"
-msgstr ""
-
-#: .\blog\templates\blog\post\search.html:27
-msgid "Search for posts"
-msgstr ""
-
-#: .\blog\templates\blog\post\share.html:6
-msgid "E-mail successfully sent"
-msgstr ""
-
-#: .\blog\templates\blog\post\share.html:8
-msgid "was successfully sent to"
-msgstr ""
-
-#: .\mysite\settings.py:181
+#: .\mysite\settings.py:196
 msgid "English"
 msgstr "English"
 
-#: .\mysite\settings.py:182
+#: .\mysite\settings.py:197
 msgid "Korean"
 msgstr "Korean"
 
@@ -1624,6 +1528,51 @@ msgstr ""
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
 msgstr ""
+
+#~ msgid "base.html"
+#~ msgstr "Title"
+
+#~ msgid "title_nav"
+#~ msgstr "Django Shop + I18n"
+
+#~ msgid "title_sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "btn_cart"
+#~ msgstr "Cart"
+
+#~ msgid "title_most_commented_post"
+#~ msgstr "Most Commented Post"
+
+#~ msgid "title_latest_posts"
+#~ msgstr "Latest Post"
+
+#~ msgid "Previous"
+#~ msgstr "Previous"
+
+#~ msgid "Next"
+#~ msgstr "Next"
+
+#~ msgid "link_share"
+#~ msgstr "Share"
+
+#~ msgid "title_products"
+#~ msgstr "Products"
+
+#~ msgid "btn_add_to_cart"
+#~ msgstr "Add to cart"
+
+#~ msgid "title_comments"
+#~ msgstr "Comments"
+
+#~ msgid "title_comment_form"
+#~ msgstr "Comment Form"
+
+#~ msgid "btn_add_comment"
+#~ msgstr "Add Comment"
+
+#~ msgid "title_list"
+#~ msgstr "List"
 
 #, fuzzy
 #~| msgid "link_share"
