@@ -170,9 +170,9 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.naver.NaverOAuth2',
 ]
+SOCIAL_AUTH_NAVER_KEY = 'JiARA_lKm_5xm9Sd9l4x'
+SOCIAL_AUTH_NAVER_SECRET = 'TXMPVDfEVC'
 
-SOCIAL_AUTH_NAVER_KEY = ''
-SOCIAL_AUTH_NAVER_SECRET = ''
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
