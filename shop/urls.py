@@ -13,5 +13,6 @@ urlpatterns = [
     path('order_create/', views.order_create, name='order_create'),
     path('success/', views.payment_success, name='payment_success'),
     path('fall/', views.payment_fail, name='payment_success'),
+    path('payment_test/<int:order_id>/', views.payment_test, name='payment_test'), # 결제 테스트용 임시 페이지
 ]
 

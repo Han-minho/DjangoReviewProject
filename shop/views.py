@@ -1,10 +1,10 @@
 import sys
 from decimal import Decimal
-from shop.tasks import order_created
+from shop.tasks import order_created, toss_payment_confirm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from shop.forms import OrderCreateForm
-from shop.models import Product, OrderItem
+from shop.models import Product, OrderItem, Order
 
 
 # Create your views here.
@@ -110,6 +110,7 @@ def payment_success(request):
     payment_key = request.GET.get('paymentKey')
     order_id = request.GET.get('orderId')
     res = dict(request.GET.items())
+    toss_payment_confirm.delay(payment_key, order_id)
     return render(request, 'shop/success.html', {
         'paymentKey': payment_key,
         'orderId': order_id,
@@ -126,3 +127,10 @@ def payment_fail(request):
         'message': message,
         'res': res,
     })
+
+
+def payment_test(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    return render(request,
+                  'shop/payment.html',
+                  {'order': order})
