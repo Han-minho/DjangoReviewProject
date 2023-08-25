@@ -33,11 +33,13 @@ def toss_payment_confirm(payment_key, toss_order_id):
         'Content-Type': 'application/json',
         'Idempotency-Key': idempotency_key,
     }
+    print(confirm_headers)
     payload = {
         'paymentKey': payment_key,
         'orderId': toss_order_id,
         'amount': order.get_total_cost(),
     }
+    print(payload)
     confirm_res = requests.post(toss_api_confirm_url, json=payload, headers=confirm_headers)
     res_data = dict(confirm_res.json())
     print('1')
@@ -48,8 +50,10 @@ def toss_payment_confirm(payment_key, toss_order_id):
     headers = {
         'Authorization': 'Basic ' + encoded_secret_key.decode('utf-8')
     }
+
     # 결과 확인 데이터베이스 업데이트
     response = requests.get(toss_api_url, headers=headers)
+    print(response)
     res_data = dict(response.json())
     if res_data['status'] == 'DONE':
         order.paid = True
