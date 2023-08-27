@@ -153,20 +153,19 @@ EMAIL_USE_TLS = True
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 
-# SESSION_REDIS_ALIAS = "default"
-#
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://127.0.0.1:6379/1",
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
-#         }
-#     }
-# }
+SESSION_REDIS_ALIAS = "default"
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        }
+    }
+}
 CART_SESSION_ID = 'cart'
 
 AUTHENTICATION_BACKENDS = [
@@ -209,7 +208,7 @@ PARLER_LANGUAGES = {
     }
 }
 
-CELERY_TASK_ALWAYS_EAGER = True
+CELERY_TASK_ALWAYS_EAGER = DEBUG
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
@@ -224,7 +223,7 @@ LOGIN_REDIRECT_URL = 'home'
 # STRIPE_SECRET_KEY = 'sk_test_51NiU7PCwCR8LeetflVLWoyUA2rOxaY0a1xk5GmjONzWpoVCTlgPyueHBipBsAosSpTfF5aQi8mzHWvgkee3zrHqe006nOQNICk'
 # STRIPE_API_VERSION = '2022-08-01'
 
-# CSRF_TRUSTED_ORIGINS = ['https://ee03-221-146-62-123.ngrok.io']
+CSRF_TRUSTED_ORIGINS = ['https://ee03-221-146-62-123.ngrok.io']
 
 # 토스 API 키 설정
 TOSS_CLIENT_KEY = 'test_ck_Z61JOxRQVE1BbyNmGzaVW0X9bAqw'
